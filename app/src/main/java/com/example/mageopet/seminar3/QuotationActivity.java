@@ -9,16 +9,16 @@ public class QuotationActivity extends AppCompatActivity {
     TextView textView_author, textView_quote;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        //modifyName("brayan");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quotation);
         textView_author = findViewById(R.id.textView_author);
         textView_quote = findViewById(R.id.textView_quote);
+        modifyName("brayan");
     }
 
     private void modifyName(String name){
-        getString(R.string.quotation_refresh).replaceFirst("%1s", name);
-        textView_quote.setText(R.string.quotation_refresh);
+        textView_quote.setText(String.format(getResources().getString(R.string.quotation_refresh),name));
+
 
     }
 

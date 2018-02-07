@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">QuotationShake</string>
+    <string name="button_get_quotations">Obtener citas</string>
+    <string name="button_favourite_quotations">Citas favoritas</string>
+    <string name="button_settings">Ajustes</string>
+    <string name="button_about">Acerca de</string>
+    <string name="activity_random_quotations">Citas aleatorias</string>
+    <string name="activity_settings">Ajustes</string>
+    <string name="activity_about">Acerca de</string>
+    <string name="favourite_author_info">Información del autor</string>
+    <string name="label_quotation_contact_info">Quotation Shake por   Brayan   bramepar@inf.upv.es  2018</string>
+    <string name="quotation_refresh">Hola %1s! Pulsa resfrescar para obtener una nueva cita</string>
+    <string name="quotation_sample_author">Esto es un autor de ejemplo</string>
+    <string name="quotation_sample_quotation">Esto es una cita de ejemplo</string>
+    <string name="settings_HTTP_method">Las peticiones WEB se realizarán usando el método HTTP</string>
+    <string name="settings_identifies_user">Nombre que identifique al usuario</string>
+    <string name="settings_insert_name">Inserta tu nombre</string>
+    <string name="settings_quotations">Las citas se obtendrán en el lenguaje seleccionado</string>
+</resources>

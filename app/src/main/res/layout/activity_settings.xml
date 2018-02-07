@@ -87,15 +87,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="RadioButton"
-                android:checked="true"/>
+                android:checked="true"
+                android:text="@string/settings_GET" />
 
             <RadioButton
                 android:id="@+id/radioButton_POST"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="RadioButton" />
+                android:text="@string/settings_POST" />
         </RadioGroup>
     </android.support.constraint.ConstraintLayout>
 </ScrollView>
