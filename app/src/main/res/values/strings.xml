@@ -19,4 +19,8 @@
     <string name="quotation_refresh">Hello %1s! Press Refresh to get a new quotation</string>
     <string name="quotation_sample_quotation">This is a sample quotation</string>
     <string name="quotation_sample_author">This is a sample author</string>
+    <string name="spinner_english">English</string>
+    <string name="spinner_russian">Russian</string>
+    <string name="favourite_author_error">Impossible to search author\\'s information</string>
+    <string name="author_uri_wiki">http://en.wikipedia.org/wiki/Special:Search?search=</string>
 </resources>

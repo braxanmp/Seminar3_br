@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://C:\Users\erolgar\AndroidStudioProjects\Seminar3_br\Seminar3.iml" filepath="C:\Users\erolgar\AndroidStudioProjects\Seminar3_br\Seminar3.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Seminar3_br.iml" filepath="$PROJECT_DIR$/Seminar3_br.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Seminar3.iml" filepath="$PROJECT_DIR$/Seminar3.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

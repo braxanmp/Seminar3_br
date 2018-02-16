@@ -1,0 +1,7 @@
+
+<resources>
+    <string-array name="spinner_array">
+        <item name="English">@string/spinner_english</item>
+        <item name="Russian">@string/spinner_russian</item>
+    </string-array>
+</resources>

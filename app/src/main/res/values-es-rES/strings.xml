@@ -17,4 +17,8 @@
     <string name="settings_identifies_user">Nombre que identifique al usuario</string>
     <string name="settings_insert_name">Inserta tu nombre</string>
     <string name="settings_quotations">Las citas se obtendrán en el lenguaje seleccionado</string>
+    <string name="spinner_english">Inglés</string>
+    <string name="spinner_russian">Ruso</string>
+    <string name="favourite_author_error">No es posible obtener la información del autor</string>
+    <string name="author_uri_wiki">http://es.wikipedia.org/wiki/Special:Search?search=</string>
 </resources>
