@@ -44,8 +44,4 @@ public class QuotationAdapter extends ArrayAdapter {
 
         return view;
     }
-
-    public void deleteQuotation(int position){
-        list.remove(position);
-    }
 }

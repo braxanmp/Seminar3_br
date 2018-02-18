@@ -42,8 +42,7 @@ public class FavouriteActivity extends AppCompatActivity {
                 builder.setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        //method in adapter created, look for other ways.
-                        adapter.deleteQuotation(i);
+                        adapter.remove(adapter.getItem(i));
                         adapter.notifyDataSetChanged();
                         Toast.makeText(getApplicationContext(), R.string.deleted_favorite, Toast.LENGTH_SHORT).show();
                     }
