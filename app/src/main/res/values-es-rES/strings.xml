@@ -21,4 +21,9 @@
     <string name="spinner_russian">Ruso</string>
     <string name="favourite_author_error">No es posible obtener la información del autor</string>
     <string name="author_uri_wiki">http://es.wikipedia.org/wiki/Special:Search?search=</string>
+    <string name="yes">Sí</string>
+    <string name="no">No</string>
+    <string name="delete_favorite_title">Borrar</string>
+    <string name="delete_favorite">¿Seguro que quieres borrar esta cita?</string>
+    <string name="deleted_favorite">Cita borrada</string>
 </resources>

@@ -1,7 +1,10 @@
 package com.example.mageopet.seminar3;
 
+import android.app.Activity;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -24,10 +27,33 @@ public class FavouriteActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_favourite);
-        ListView lv = (ListView) findViewById(R.id.list_view);
-        QuotationAdapter adapter = new QuotationAdapter(
+        final ListView lv = (ListView) findViewById(R.id.list_view);
+        final QuotationAdapter adapter = new QuotationAdapter(
                 this, R.layout.quotation_list_row, getMockQuotations());
         lv.setAdapter(adapter);
+        lv.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+                final int i = position;
+                AlertDialog.Builder builder = new AlertDialog.Builder(parent.getContext());
+                builder.setIcon(android.R.drawable.stat_sys_warning);
+                builder.setTitle(R.string.delete_favorite_title);
+                builder.setMessage(R.string.delete_favorite);
+                builder.setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        //method in adapter created, look for other ways.
+                        adapter.deleteQuotation(i);
+                        adapter.notifyDataSetChanged();
+                        Toast.makeText(getApplicationContext(), R.string.deleted_favorite, Toast.LENGTH_SHORT).show();
+                    }
+                });
+                builder.setNegativeButton(android.R.string.no, null);
+                builder.create().show();
+
+                return true;
+            }
+        });
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

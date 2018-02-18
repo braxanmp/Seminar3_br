@@ -27,7 +27,8 @@
             android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
             android:name=".FavouriteActivity"
-            android:label="@string/activity_quotation_shake" />
+            android:label="@string/activity_quotation_shake"
+            android:theme="@style/AppTheme"/>
         <activity
             android:name=".QuotationActivity"
             android:label="@string/activity_random_quotations"
