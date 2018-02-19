@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/item_add"
+        android:icon="@android:drawable/ic_menu_add"
+        android:title="Add"
+        android:visible="false"></item>
+    <item
+        android:id="@+id/item_refresh"
+        android:icon="@android:drawable/ic_menu_rotate"
+        android:title="Refresh"></item>
+</menu>

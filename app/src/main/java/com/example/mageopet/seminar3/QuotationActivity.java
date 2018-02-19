@@ -2,11 +2,14 @@ package com.example.mageopet.seminar3;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
 public class QuotationActivity extends AppCompatActivity {
     TextView textView_author, textView_quote;
+    private static Menu optionsMenu;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -14,6 +17,28 @@ public class QuotationActivity extends AppCompatActivity {
         textView_author = findViewById(R.id.textView_author);
         textView_quote = findViewById(R.id.textView_quote);
         modifyName("brayan");
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu, menu);
+        optionsMenu = menu;
+        optionsMenu.findItem(R.id.item_add).setVisible(true);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem menu){
+        switch (menu.getItemId()) {
+            case R.id.item_add:
+                menu.setVisible(true);
+                newQuotation(menu.getActionView());
+                return true;
+            case R.id.item_refresh:
+                return true;
+            default:
+                return false;
+        }
     }
 
     private void modifyName(String name){
