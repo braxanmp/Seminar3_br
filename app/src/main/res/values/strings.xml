@@ -28,4 +28,6 @@
     <string name="yes">Yes</string>
     <string name="no">No</string>
     <string name="deleted_favorite">Quotation deleted</string>
+    <string name="menu_item_add">Add</string>
+    <string name="menu_item_refresh">Refresh</string>
 </resources>

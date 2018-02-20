@@ -3,10 +3,10 @@
     <item
         android:id="@+id/item_add"
         android:icon="@android:drawable/ic_menu_add"
-        android:title="Add"
+        android:title="@string/menu_item_add"
         android:visible="false"></item>
     <item
         android:id="@+id/item_refresh"
         android:icon="@android:drawable/ic_menu_rotate"
-        android:title="Refresh"></item>
+        android:title="@string/menu_item_refresh"></item>
 </menu>
