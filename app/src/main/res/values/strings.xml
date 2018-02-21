@@ -24,10 +24,14 @@
     <string name="favourite_author_error">Impossible to search author\\'s information</string>
     <string name="author_uri_wiki">http://en.wikipedia.org/wiki/Special:Search?search=</string>
     <string name="delete_favorite_title">Delete</string>
+    <string name="delete_favorite_all">Are you sure that you want to delete ALL your favourite quotations</string>
     <string name="delete_favorite">Are you sure that you want to delete this quotation?</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
     <string name="deleted_favorite">Quotation deleted</string>
+    <string name="deleted_favorite_all">Quotations deleted</string>
     <string name="menu_item_add">Add</string>
     <string name="menu_item_refresh">Refresh</string>
+    <string name="menu_item_delete">Delete</string>
+
 </resources>

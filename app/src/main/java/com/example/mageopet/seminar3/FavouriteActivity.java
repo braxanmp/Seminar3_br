@@ -8,6 +8,8 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -22,13 +24,16 @@ import static android.content.Intent.ACTION_VIEW;
 
 public class FavouriteActivity extends AppCompatActivity {
     String authorName = "Albert Einstein";
+    private static Menu optionsMenu;
+    private ListView lv;
+    private QuotationAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_favourite);
-        final ListView lv = (ListView) findViewById(R.id.list_view);
-        final QuotationAdapter adapter = new QuotationAdapter(
+        lv = (ListView) findViewById(R.id.list_view);
+        adapter = new QuotationAdapter(
                 this, R.layout.quotation_list_row, getMockQuotations());
         lv.setAdapter(adapter);
         lv.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
@@ -63,6 +68,40 @@ public class FavouriteActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), getText(R.string.favourite_author_error), Toast.LENGTH_SHORT).show();
             }
         });
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.favourite_menu, menu);
+        optionsMenu = menu;
+        if (!lv.getAdapter().isEmpty()) {
+            optionsMenu.findItem(R.id.item_delete).setVisible(true);
+        }
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem menu){
+        switch (menu.getItemId()) {
+            case R.id.item_delete:
+                AlertDialog.Builder builder = new AlertDialog.Builder(FavouriteActivity.this);
+                builder.setIcon(android.R.drawable.stat_sys_warning);
+                builder.setTitle(R.string.delete_favorite_title);
+                builder.setMessage(R.string.delete_favorite_all);
+                builder.setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        adapter.clear();
+                        optionsMenu.findItem(R.id.item_delete).setVisible(false);
+                        Toast.makeText(getApplicationContext(), R.string.deleted_favorite_all, Toast.LENGTH_SHORT).show();
+                    }
+                });
+                builder.setNegativeButton(android.R.string.no, null);
+                builder.create().show();
+                return true;
+
+            default:
+                return false;
+        }
     }
 
     public void showAuthorInfo(View view) {

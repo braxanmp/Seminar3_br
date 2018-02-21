@@ -21,7 +21,7 @@ public class QuotationActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu, menu);
+        getMenuInflater().inflate(R.menu.quotation_menu, menu);
         optionsMenu = menu;
         optionsMenu.findItem(R.id.item_add).setVisible(true);
         return true;
@@ -32,7 +32,7 @@ public class QuotationActivity extends AppCompatActivity {
         switch (menu.getItemId()) {
             case R.id.item_add:
                 menu.setVisible(true);
-                newQuotation(menu.getActionView());
+                newQuotation(textView_author.getRootView());
                 return true;
             case R.id.item_refresh:
                 return true;
